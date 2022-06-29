@@ -11,7 +11,7 @@ const canBeFolded = (prevGroupDate, date, rule) => {
       date.getMonth() === prevGroupDate.getMonth() &&
       date.getDay() === prevGroupDate.getDay()
   }
-  else if (rule === 'hours') {
+  else if (rule === 'hour') {
     return date.getYear() === prevGroupDate.getYear() &&
       date.getMonth() === prevGroupDate.getMonth() &&
       date.getDay() === prevGroupDate.getDay() && 
