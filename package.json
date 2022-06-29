@@ -1,0 +1,25 @@
+{
+  "name": "date-booster",
+  "version": "1.0.0",
+  "description": "Date booster",
+  "keywords": [
+    "date-booster",
+    "fold-date"
+  ],
+  "author": "Zhang Meixue",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xNoRain001/date-booster.git"
+  },
+  "main": "dist/date-booster.js",
+  "scripts": {
+    "build": "rollup -c -w"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^2.72.0"
+  },
+  "devDependencies": {
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}
