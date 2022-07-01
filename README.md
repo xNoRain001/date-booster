@@ -15,7 +15,7 @@ npm i date-booster
 ## 使用
 
 ```javascript
-// import dateBooster from 'date-booster'
+// import DateBooster from 'date-booster'
 
 const dateBooster = new DateBooster()
 ```
@@ -28,7 +28,7 @@ const dateBooster = new DateBooster()
 /*
  * 将属于同一时间范围的数据折叠到一起。
  *
- * @param {array=[]} data 待处理的数据
+ * @param {array=[]} data 待处理的数据，数组的每一项是对象，对象中通过 date 属性标识时间
  * @param {string='day'} rule 折叠方式，可选值有 hour | day | month | year
  * @param {boolean=true} descending 时间降序排列
  * @return {array} 处理后的数据
@@ -125,4 +125,33 @@ dateBooster.getMonth('2022-06-29T12:00', false) // output: June
 
 dateBooster.getWeek('2022-06-29T12:00') // output: Wed
 dateBooster.getWeek('2022-06-29T12:00', false) // output: Wednesday
+```
+
+### getTimeDiff
+
+```javascript
+/*
+ * 计算两个日期间的时间差
+ *
+ * @param {string|Date} date1 开始时间
+ * @param {string|Date} date2 结束时间
+ * @param {string} format 时间差值的单位 s（秒） | m（分） | h（时） | d（天）
+ * @return {number} 时间差值
+ */
+
+dateBooster.getTimeDiff('2022-06-30T12:00', '2022-06-30T13:45', 'm') // output: 105
+dateBooster.getTimeDiff('2022-06-30T12:00', '2022-07-15T11:45', 'd') // output: 14
+```
+
+### countdown
+
+```javascript
+/*
+ * 倒计时
+ *
+ * @param {HTMLElement} 显示倒计时的元素
+ * @param {string|Date} 倒计时为0的时刻
+ */
+
+dateBooster.countdown(elm, '2022-06-30T15:11') // elm.innerText: 00:54:38
 ```
