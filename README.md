@@ -28,9 +28,9 @@ const dateBooster = new DateBooster()
 /*
  * 将属于同一时间范围的数据折叠到一起。
  *
- * @param {array=[]} data 待处理的数据，数组的每一项是对象，对象中通过 date 属性标识时间
- * @param {string='day'} rule 折叠方式，可选值有 hour | day | month | year
- * @param {boolean=true} descending 时间降序排列
+ * @param {Array} data - 待处理的数据，数组的每一项是对象，对象中通过 date 属性标识时间
+ * @param {string} [rule=day] - 折叠方式，可选值有 hour | day | month | year
+ * @param {boolean} [descending=true] - 时间降序排列
  * @return {array} 处理后的数据
  */
 
@@ -103,8 +103,8 @@ dateBooster.foldDate(data, 'day')
 /*
  * 获取当前日期的月份
  * 
- * @param {date} data
- * @param {boolean=true} shorthand 是否简写
+ * @param {(Date|string)} data - 当前日期
+ * @param {boolean} [shorthand=trye] - 是否简写
  * @return {string} 当前日期的月份
  */
 
@@ -118,8 +118,8 @@ dateBooster.getMonth('2022-06-29T12:00', false) // output: June
 /*
  * 获取当前日期的星期
  * 
- * @param {date} data
- * @param {boolean=true} shorthand 是否简写
+ * @param {(Date|string)} data - 当前日期
+ * @param {boolean} [shorthand=true] - 是否简写
  * @return {string} 当前日期的星期
  */
 
@@ -133,9 +133,9 @@ dateBooster.getWeek('2022-06-29T12:00', false) // output: Wednesday
 /*
  * 计算两个日期间的时间差
  *
- * @param {string|Date} date1 开始时间
- * @param {string|Date} date2 结束时间
- * @param {string} format 时间差值的单位 s（秒） | m（分） | h（时） | d（天）
+ * @param {(Date|string)} date1 - 开始时间
+ * @param {(Date|string)} date2 - 结束时间
+ * @param {string} format - 时间差值的单位，可选值有： s（秒） | m（分） | h（时） | d（天）
  * @return {number} 时间差值
  */
 
@@ -149,8 +149,8 @@ dateBooster.getTimeDiff('2022-06-30T12:00', '2022-07-15T11:45', 'd') // output: 
 /*
  * 倒计时
  *
- * @param {HTMLElement} 显示倒计时的元素
- * @param {string|Date} 倒计时为0的时刻
+ * @param {HTMLElement} - 显示倒计时的元素
+ * @param {(Date|string)} - 倒计时为0的时刻
  */
 
 dateBooster.countdown(elm, '2022-06-30T15:11') // elm.innerText: 00:54:38
