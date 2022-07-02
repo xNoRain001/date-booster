@@ -25,7 +25,7 @@ const dateBooster = new DateBooster()
 ### foldDate
 
 ```javascript
-/*
+/**
  * 将属于同一时间范围的数据折叠到一起。
  *
  * @param {Array} data - 待处理的数据，数组的每一项是对象，对象中通过 date 属性标识时间
@@ -33,7 +33,6 @@ const dateBooster = new DateBooster()
  * @param {boolean} [descending=true] - 时间降序排列
  * @return {array} 处理后的数据
  */
-
 const data = [
   {
     number: 1,
@@ -100,14 +99,13 @@ dateBooster.foldDate(data, 'day')
 ### getMonth
 
 ```javascript
-/*
+/**
  * 获取当前日期的月份
  * 
  * @param {(Date|string)} data - 当前日期
  * @param {boolean} [shorthand=trye] - 是否简写
  * @return {string} 当前日期的月份
  */
-
 dateBooster.getMonth('2022-06-29T12:00') // output: Jun
 dateBooster.getMonth('2022-06-29T12:00', false) // output: June
 ```
@@ -115,14 +113,13 @@ dateBooster.getMonth('2022-06-29T12:00', false) // output: June
 ### getWeek
 
 ```javascript
-/*
+/**
  * 获取当前日期的星期
  * 
  * @param {(Date|string)} data - 当前日期
  * @param {boolean} [shorthand=true] - 是否简写
  * @return {string} 当前日期的星期
  */
-
 dateBooster.getWeek('2022-06-29T12:00') // output: Wed
 dateBooster.getWeek('2022-06-29T12:00', false) // output: Wednesday
 ```
@@ -130,7 +127,7 @@ dateBooster.getWeek('2022-06-29T12:00', false) // output: Wednesday
 ### getTimeDiff
 
 ```javascript
-/*
+/**
  * 计算两个日期间的时间差
  *
  * @param {(Date|string)} date1 - 开始时间
@@ -138,7 +135,6 @@ dateBooster.getWeek('2022-06-29T12:00', false) // output: Wednesday
  * @param {string} format - 时间差值的单位，可选值有： s（秒） | m（分） | h（时） | d（天）
  * @return {number} 时间差值
  */
-
 dateBooster.getTimeDiff('2022-06-30T12:00', '2022-06-30T13:45', 'm') // output: 105
 dateBooster.getTimeDiff('2022-06-30T12:00', '2022-07-15T11:45', 'd') // output: 14
 ```
@@ -146,12 +142,11 @@ dateBooster.getTimeDiff('2022-06-30T12:00', '2022-07-15T11:45', 'd') // output: 
 ### countdown
 
 ```javascript
-/*
+/**
  * 倒计时
  *
  * @param {HTMLElement} - 显示倒计时的元素
  * @param {(Date|string)} - 倒计时为0的时刻
  */
-
 dateBooster.countdown(elm, '2022-06-30T15:11') // elm.innerText: 00:54:38
 ```
